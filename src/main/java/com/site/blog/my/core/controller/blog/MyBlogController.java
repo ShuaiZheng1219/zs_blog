@@ -216,6 +216,18 @@ public class MyBlogController {
     }
 
     /**
+     * 友情链接页
+     *
+     * @return
+     */
+    @GetMapping({"/about"})
+    public String about(HttpServletRequest request) {
+        request.setAttribute("pageName", "关于本站");
+        request.setAttribute("configurations", configService.getAllConfigs());
+        return "blog/" + theme + "/about";
+    }
+
+    /**
      * 评论操作
      */
     @PostMapping(value = "/blog/comment")

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="blog/amaze/header::head-fragment"></head>
+<body id="blog">
+<div th:replace="blog/amaze/header::nav-fragment"></div>
+<div th:replace="blog/amaze/header::header-fragment"></div>
+<div class="am-g am-g-fixed blog-fixed">
+  <div class="am-u-lg-8 am-u-sm-12">
+    <main class="about">
+      <h2 id="关于">关于本站</h2>
+      <p>本站为自用博客，用于平时记笔记所用</p>
+      <p>欢迎大家评论交流，相互学习</p>
+      <p>邮箱:
+        <th:block th:text="${configurations.get('yourEmail')}"></th:block>
+      </p>
+      <p>qq:982162304</p>
+
+    </main>
+  </div>
+</div>
+<!-- 引入页脚footer-fragment -->
+<footer th:replace="blog/amaze/footer::footer-fragment"></footer>
+</body>
+</html>
